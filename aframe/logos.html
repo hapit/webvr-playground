@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Panorama</title>
+    <meta name="description" content="Panorama — A-Frame">
+    <script src="js/aframe_0.3.2.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <!--<a-sky src="resources/java360.jpg" rotation="0 -130 0"></a-sky>-->
+
+
+    <a-assets timeout="10000">
+        <a-asset-item id="logo" src="resources/jambit_logo_beans.dae">
+        <a-asset-item id="logo_w_bg" src="resources/jambit_logo_beans_with_bg.dae">
+    </a-assets>
+
+
+    <a-collada-model src="#logo" position="-5 1.6 0" rotation="0 0 0">
+        <a-animation attribute="rotation"
+                     dur="5000"
+                     fill="forwards"
+                     to="0 360 0"
+                     easing="linear"
+                     repeat="indefinite"></a-animation>
+    </a-collada-model>
+
+    <a-collada-model src="#logo_w_bg" position="-2 3 4" rotation="0 0 0">
+        <a-animation attribute="rotation"
+                     dur="5000"
+                     fill="forwards"
+                     to="0 360 0"
+                     easing="linear"
+                     repeat="indefinite"></a-animation>
+    </a-collada-model>
+
+    <a-sky src="resources/java360.jpg" rotation="0 -130 0"></a-sky>
+
+    <a-entity position="0 0 0" rotation="0 110 0">
+        <a-camera user-height="1.6"></a-camera>
+    </a-entity>
+
+
+</a-scene>
+</body>Your browse
+</html>
