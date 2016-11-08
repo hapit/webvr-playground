@@ -5,6 +5,7 @@
     <title>Panorama</title>
     <meta name="description" content="Panorama — A-Frame">
     <script src="js/aframe_0.3.2.min.js"></script>
+    <script src="js/kframe.min.js"></script>
 </head>
 <body>
 <a-scene>
@@ -12,28 +13,52 @@
 
 
     <a-assets timeout="10000">
-        <a-asset-item id="logo" src="resources/jambit_logo_beans.dae">
-        <a-asset-item id="logo_w_bg" src="resources/jambit_logo_beans_with_bg.dae">
+        <a-asset-item id="logo" src="resources/jambit_logo_beans.dae"></a-asset-item>
+        <a-asset-item id="logo_w_bg" src="resources/jambit_logo_beans_with_bg.dae"></a-asset-item>
+
+        <a-mixin id="random_sphere_pos" random-spherical-position></a-mixin>
+        <a-mixin id="anim_360_rotation"  attribute="rotation"
+                         dur="5000"
+                         fill="forwards"
+                         to="0 360 0"
+                         easing="linear"
+                         repeat="indefinite">
+        </a-mixin>
     </a-assets>
 
 
-    <a-collada-model src="#logo" position="-5 1.6 0" rotation="0 0 0">
-        <a-animation attribute="rotation"
-                     dur="5000"
-                     fill="forwards"
-                     to="0 360 0"
-                     easing="linear"
-                     repeat="indefinite"></a-animation>
+    <a-collada-model src="#logo" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
     </a-collada-model>
 
-    <a-collada-model src="#logo_w_bg" position="-2 3 4" rotation="0 0 0">
-        <a-animation attribute="rotation"
-                     dur="5000"
-                     fill="forwards"
-                     to="0 360 0"
-                     easing="linear"
-                     repeat="indefinite"></a-animation>
+    <a-collada-model src="#logo_w_bg" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
     </a-collada-model>
+
+    <a-collada-model src="#logo" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
+    </a-collada-model>
+
+    <a-collada-model src="#logo_w_bg" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
+    </a-collada-model>
+
+    <a-collada-model src="#logo" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
+    </a-collada-model>
+
+    <a-collada-model src="#logo_w_bg" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
+    </a-collada-model>
+
+    <a-collada-model src="#logo" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
+    </a-collada-model>
+
+    <a-collada-model src="#logo_w_bg" mixin="random_sphere_pos anim_360_rotation">
+        <a-animation mixin="anim_360_rotation"></a-animation>
+    </a-collada-model>
+
 
     <a-sky src="resources/java360.jpg" rotation="0 -130 0"></a-sky>
 
@@ -43,5 +68,6 @@
 
 
 </a-scene>
-</body>Your browse
+</body>
+Your browse
 </html>
