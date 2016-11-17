@@ -9,8 +9,6 @@
 </head>
 <body>
 <a-scene>
-    <!--<a-sky src="resources/java360.jpg" rotation="0 -130 0"></a-sky>-->
-
 
     <a-assets>
         <a-asset-item id="graph" src="resources/piechart.dae"></a-asset-item>
@@ -20,6 +18,7 @@
     <a-collada-model src="#graph">
     </a-collada-model>
 
+    <a-sky color="#FFFFFF"></a-sky>
 
     <a-entity position="0 0 0" rotation="0 110 0">
         <a-camera user-height="1.7"></a-camera>
